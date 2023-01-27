@@ -11,6 +11,8 @@ Local para controlar versão de códigos proprietários da Empresa.
 
 - T-Cloud somente para Administradores internos.
 
+- Credenciais FTP somente para Administradores internos.
+
 - Ambiente DEV-Uniagro ninguém deve conectar, é para manobra interna do TI, não deve ser homologado processo de negócio nenum neste ambiente.
 
 
