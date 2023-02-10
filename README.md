@@ -20,10 +20,14 @@ Local para controlar versão de códigos proprietários da Empresa.
 
 ## Segue o passo para envio de nova versão de Fonte - Git flow da Uniagro
 
+-Para eu aceitar a alteração e colocar em produção é preciso enviar o número do chamado junto ao service desk do TI Uniagro no commit.
+
 - Só mando pra branch main depois de homologado e testado pelo usuário requisitante
-- Erro crítico em prod de fontes puxar fonte para branch hot-fix
-- Manutenção e correção na branch bug-fix - precisa número de chamado no service desk TRS ou TI Uniagro
-- Implementação de novo programa na branch feature
+- Todos que quiserem desenvolver os fontes da uniagro devem partir de um código que venha do main
+- Ao fazerem clone mudar a branch para o que forem fazer, ex:
+        branch feature- Novo recurso na customização
+        branch hot-fix- Corrigir erro critico em produção
+        branch bug-fix- sera implantado na próxima release
 
 
 ## Segue o passo a passo para redeploy de pacote:
