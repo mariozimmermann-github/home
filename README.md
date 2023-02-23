@@ -27,7 +27,9 @@ Local para controlar versão de códigos proprietários da Empresa.
 - Ao fazerem clone mudar a branch para o que forem fazer, ex:
 
 branch **feature** - Novo recurso na customização
+
 branch **hot-fix** - Corrigir erro critico em produção
+
 branch **bug-fix** - sera implantado na próxima release
 
 - Após concluirem o trabalho devem fazer um pull request
