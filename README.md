@@ -23,12 +23,15 @@ Local para controlar versão de códigos proprietários da Empresa.
 -Para eu aceitar a alteração e colocar em produção é preciso enviar o número do chamado junto ao service desk do TI Uniagro no commit.
 
 - Só mando pra branch main depois de homologado e testado pelo usuário requisitante
-- Todos que quiserem desenvolver os fontes da uniagro devem partir de um código que venha do main
+- Todos que quiserem desenvolver os fontes da uniagro devem partir de um código que venha do main, fazendo um clone e mudando para a branch conforme abaixo.
 - Ao fazerem clone mudar a branch para o que forem fazer, ex:
-        branch feature- Novo recurso na customização
-        branch hot-fix- Corrigir erro critico em produção
-        branch bug-fix- sera implantado na próxima release
 
+        branch **feature** - Novo recurso na customização
+        branch **hot-fix** - Corrigir erro critico em produção
+        branch **bug-fix** - sera implantado na próxima release
+- Após concluirem o trabalho devem fazer um pull request
+- Validarei com o usuário requisitante se esta ok
+- Farei um merge para branch main e deploy em produção.
 
 ## Segue o passo a passo para redeploy de pacote:
   
