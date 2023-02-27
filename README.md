@@ -20,7 +20,7 @@ Local para controlar versão de códigos proprietários da Empresa.
 
 ## Segue o passo para envio de nova versão de Fonte - Git flow da Uniagro
 
--Para eu aceitar a alteração e colocar em produção é preciso enviar o número do chamado junto ao service desk do TI Uniagro no commit.
+-Para que seja aceita a alteração e colocada em produção é preciso enviar o número do chamado junto ao service desk do TI Uniagro no commit.
 
 - Só mando pra branch main depois de homologado e testado pelo usuário requisitante
 - Todos que quiserem desenvolver os fontes da uniagro devem partir de um código que venha do main, fazendo um clone e mudando para a branch conforme abaixo.
