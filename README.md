@@ -2,7 +2,10 @@
 
 Local para controlar versão de códigos proprietários da Empresa.
 
-[Ir para o repositório](https://github.com/uniagro-ind/home)
+Ir Para:
+
+[Repositório](https://github.com/uniagro-ind/home)
+[Página](https://uniagro-ind.github.io/home/)
 
 
 # Protheus
