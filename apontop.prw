@@ -262,7 +262,7 @@ Static Function EnderPRD(_cProdLoc, _nQuant)
 		aItSDB :=  {{"DB_ITEM"   , _cItem      			, Nil},;
 					{"DB_PRODUTO", _cProdLoc	        , Nil},;
 					{"DB_LOCAL"  , _cLocal	    		, Nil},;
-					{"DB_LOCALIZ", _cLocaliz    		, Nil},;
+					{"DB_LOCALIZ", "CORREDOR"    		, Nil},;
 					{"DA_DOC" 	 , _cDoc				, Nil},;
 					{"DB_QUANT"  , _nQuant         		, Nil},;
 					{"DB_DATA"   , dDataBase   			, Nil},;
@@ -279,8 +279,6 @@ Static Function EnderPRD(_cProdLoc, _nQuant)
 		If lMsErroAuto
 			MostraErro()
 			DISARMTRANSACTION()
-		Else
-			MsgAlert("Endereçamento Realizado com Sucesso!", "Ok")
 		EndIf
 
 		END TRANSACTION
