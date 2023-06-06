@@ -8,6 +8,16 @@ Ir Para:
 
 [Página](https://uniagro-ind.github.io/home/)
 
+# Instruções básicas
+
+*clonar* um repositório - obter o repositório remoto do git para uma pasta local
+*fork* - puxar o código de algum repositório para o seu repositório do git
+*commit* - submeter o codigo local para o repositório remoto
+*pull request* - solicitar que seu codigo entre para a release oficial de desenvolvimento do repositório base.
+*merge* - aceitar o pull request e fazer com que o código submetido faça parte da release oficial para a próxima build de RPO Custom.
+
+
+
 
 # Protheus
 
