@@ -7,9 +7,24 @@
 			"name": "Depuração do idioma TOTVS",
 			"program": "${command:AskForProgramName}",
 			"cwb": "${workspaceFolder}",
-			"smartclientBin": "../totvs/bin/smartclient/smartclient.exe",
+			"smartclientBin": "D:\\TOTVS\\smartclient_Uniagro\\smartclient_PROD\\smartclient\\smartclient.exe",
 			"isMultiSession": true,
 			"enableTableSync": true
 		}
-	]
+	],
+	"lastPrograms": [
+		{
+			"label": "sigacfg"
+		},
+		{
+			"label": "sigamdi"
+		},
+		{
+			"label": "vtdebug"
+		},
+		{
+			"label": "mpsdu"
+		}
+	],
+	"lastProgramExecuted": "mpsdu"
 }
