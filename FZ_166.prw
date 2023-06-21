@@ -1190,7 +1190,7 @@ Static Function VldProduto(cEtiCB0,cEtiProd,nQtde)
 							//CB7->CB7_STATUS := "9"  // Final separacao
 							//CB7->(MsUnLock())
 						EndIf
-
+//felipe
 						_TRB01->(DbSkip())
 					EndDo
 				Else
