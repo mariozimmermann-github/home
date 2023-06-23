@@ -1,4 +1,4 @@
-//Bibliotecas
+//BibliotecasUNIC011
 #Include "Totvs.ch"
 #Include "FWMVCDef.ch"
 
@@ -84,9 +84,9 @@ Static Function ModelDef()
     //Filial de POA
     oStrGrid1:RemoveField( "Z4_SUAPOA"  ) 
 
-    //Remove os campos da grid Cachoerinha
+    //Remove os campos da grid Cajamar
     //Deixa os campos somente pertecente a 
-    //Filial de cachoerinha
+    //Filial de Cajamar
     oStrGrid2:RemoveField( "Z5_CODIGO"  )  
     oStrGrid2:RemoveField( "Z5_SUACHAC" )
 
@@ -190,7 +190,7 @@ Static Function ModelDef()
     oModel:SetDescription("Uniagro")
     oModel:GetModel("SZ3MASTER"):SetDescription("Dados Cliente")
     oModel:GetModel("SZ4GRID1"):SetDescription("POA")    
-    oModel:GetModel("SZ5GRID1"):SetDescription("Cachoerinha")    
+    oModel:GetModel("SZ5GRID1"):SetDescription("Cajamar")    
     oModel:GetModel("SZ6GRID1"):SetDescription("Itajaí")    
     oModel:GetModel("TMPCABEC"):SetDescription("Produto")    
     oModel:GetModel("TMPGRID1"):SetDescription("Dados Produto")    
@@ -236,9 +236,9 @@ Static Function ViewDef()
     oStrGrid1:RemoveField( "Z4_CODIGO"  )
     oStrGrid1:RemoveField( "Z4_SUAPOA"  )
 
-    //Remove os campos da grid Cachoerinha
+    //Remove os campos da grid Cajamar
     //Deixa os campos somente pertecente a 
-    //Filial de cachoerinha
+    //Filial de Cajamar
     oStrGrid2:RemoveField( "Z5_CODIGO"  )    
     oStrGrid2:RemoveField( "Z5_PRODUTO" )    
     oStrGrid2:RemoveField( "Z5_SUACHAC" ) 
@@ -289,7 +289,7 @@ Static Function ViewDef()
     oView:EnableTitleView( "VIEW_TMPCABE" , "Pesquisa Produto")
     oView:EnableTitleView( "VIEW_TMPGRID" , "Retorno Pesquisa - Clicar 2 X para incluir na Grid")
     oView:EnableTitleView( "VIEW_SZ3GRID1", "POA"             )
-    oView:EnableTitleView( "VIEW_SZ3GRID2", "Cachoeirinha"    )
+    oView:EnableTitleView( "VIEW_SZ3GRID2", "Cajamar"    )
     oView:EnableTitleView( "VIEW_SZ3GRID3", "Itajaí"          )
 
 Return oView 
@@ -363,12 +363,12 @@ Static Function DEFPRODUTO()
     Local oGridPesq	:= oModel:GetModel( "TMPGRID1" )
     Local cProdSZ3  := oGRIDSZ31:GetValue( "Z4_PRODUTO" )
     Local cCodProdut:= oGridPesq:GetValue( "TMP2_COD" )
-    Local cLocalPad := oGridPesq:GetValue( "TMP2_LOCAL" )
+    //Local cLocalPad := oGridPesq:GetValue( "TMP2_LOCAL" )
     Local nSaldo01  := 0
-    Local nSaldo04  := 0
+    Local nSaldo06  := 0
     Local nSaldo05  := 0
     Local nVlrPrd01 := 0
-    Local nVlrPrd04 := 0
+    Local nVlrPrd06 := 0
     Local nVlrPrd05 := 0
     Local cLoc01    := GetMV("ES_LOCPOA")   
     Local cLoc04    := GetMV("ES_LOCCAC")
@@ -396,14 +396,14 @@ Static Function DEFPRODUTO()
             nVlrPrd01   := 0 
         EndIf   
         
-        //Filial Cachoerinha      
+        //Filial Cajamar      
         DbSelectArea("SB2")
-        If SB2->(MsSeek("0104" + cCodProdut + cLoc04))
-            nSaldo04    := SaldoSb2()
-            nVlrPrd04   := SB2->B2_CM1
+        If SB2->(MsSeek("0106" + cCodProdut + cLoc04))
+            nSaldo06    := SaldoSb2()
+            nVlrPrd06   := SB2->B2_CM1
         Else
-            nSaldo04    := 0
-            nVlrPrd04   := 0 
+            nSaldo06    := 0
+            nVlrPrd06   := 0 
         EndIf        
         oGRIDSZ32:SetValue("Z5_PRODUTO" , cCodProdut  )
 
@@ -421,8 +421,8 @@ Static Function DEFPRODUTO()
         oGRIDSZ31:SetValue("Z4_SLDPOA"   , nSaldo01  )
         oGRIDSZ31:SetValue("Z4_VLRPOA"   , nVlrPrd01 )         
  
-        oGRIDSZ32:SetValue("Z5_SLDCHAC"  , nSaldo04  )
-        oGRIDSZ32:SetValue("Z5_VLRCHAC"  , nVlrPrd04 )
+        oGRIDSZ32:SetValue("Z5_SLDCHAC"  , nSaldo06  )
+        oGRIDSZ32:SetValue("Z5_VLRCHAC"  , nVlrPrd06 )
 
         oGRIDSZ33:SetValue("Z6_SLDITAJ"  , nSaldo05  )
         oGRIDSZ33:SetValue("Z6_VLRITAJ"  , nVlrPrd05 )
