@@ -41,8 +41,9 @@ RptStatus({|lEnd| Continua(@lEnd,wnRel,titulo,tamanho)},titulo)
 Return NIL
 
 Static Function Continua(lEnd,wnRel,titulo,tamanho)
-Local CbCont,cabec1,cabec2,cbtxt
-Local limite   :=120
+Local xx	 := 0
+Local cabec1,cabec2//,cbtxt
+//Local limite   :=120
 Local nomeprog :="MZ_IQFF"
 Private nLin   := 80
 Private M_PAG  := 1      
